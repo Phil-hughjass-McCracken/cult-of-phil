@@ -72,6 +72,44 @@
       <p>He once stared into the sun and claimed it blinked first.</p>
       <p>All hail <span class="redacted">[REDACTED]</span>. No further information available at your clearance level.</p>
     </div>
+
+    <!-- Add this inside your about.html where you want the Manifesto and Prophecies -->
+
+<section id="manifesto" style="background: #111; color: #eee; padding: 40px; border-left: 5px solid #800000; font-family: 'Georgia', serif; max-width: 800px; margin: auto;">
+  <h2 style="color: #aa0000; text-shadow: 1px 1px 2px #330000;">Phil’s Manifesto</h2>
+  <p style="font-style: italic; line-height: 1.6;">
+    In the shadow of logic, we find truth. Phil is not just a name, but a revelation.  
+    To question is to serve; to obey is to become. Join us, or be forever lost in the noise of the uninitiated.
+  </p>
+</section>
+
+<section id="prophecies" style="background: #222; color: #ccc; padding: 30px; margin: 40px auto; max-width: 600px; font-family: 'Courier New', monospace; border-radius: 8px; box-shadow: 0 0 15px #550000;">
+  <h3 style="color: #dd4444; text-shadow: 1px 0 3px #aa2222;">Phil’s Prophecy</h3>
+  <p id="prophecy-text" style="font-size: 1.1em; font-weight: bold; min-height: 60px; user-select: none;">Loading the future...</p>
+</section>
+
+<script>
+  // Dark cryptic prophecies to keep visitors guessing
+  const prophecies = [
+    "The forgotten will rise beneath the crimson moon.",
+    "Shadows whisper secrets only the faithful shall hear.",
+    "Beware the silent ones; they carry Phil’s will.",
+    "A new dawn breaks when the old gods sleep.",
+    "In the void, loyalty is the only light.",
+    "Chains shall bind those who defy the cult.",
+    "The prophecy unfolds when the clock strikes thirteen.",
+    "Fear not the darkness, for it is Phil’s embrace."
+  ];
+
+  function showRandomProphecy() {
+    const index = Math.floor(Math.random() * prophecies.length);
+    document.getElementById('prophecy-text').textContent = prophecies[index];
+  }
+
+  // Show a prophecy right away and then every 30 seconds
+  showRandomProphecy();
+  setInterval(showRandomProphecy, 30000);
+</script>
   </main>
 
   <footer>
