@@ -4,32 +4,61 @@
   <meta charset="UTF-8" />
   <title>Initiation | Cult of Phil</title>
   <style>
-    /* Paste all CSS from before here */
-    /* For quick copy, here’s the CSS block: */
     body {
       background: #111;
       color: #dd4444;
       font-family: 'Courier New', monospace;
       user-select: none;
       margin: 0; padding: 0;
-      display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
+
+    #initiate-btn {
+      background: #cc4444;
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.25rem;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #cc4444;
+      transition: background 0.3s ease;
+    }
+    #initiate-btn:hover {
+      background: #aa2222;
+    }
+
     .modal {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: rgba(0,0,0,0.85);
-      display: flex; justify-content: center; align-items: center;
+      display: none;
+      justify-content: center;
+      align-items: center;
       z-index: 1000;
     }
+
     .modal-content {
-      background: #222; color: #eee; padding: 2rem;
-      max-width: 400px; text-align: center;
+      background: #222;
+      color: #eee;
+      padding: 2rem;
+      max-width: 400px;
+      text-align: center;
       border: 3px solid #aa0000;
       border-radius: 10px;
     }
+
     .modal-content h2 {
       color: #cc4444;
       margin-bottom: 1rem;
     }
+
     .modal-content button {
       margin-top: 1.5rem;
       background: #cc4444;
@@ -44,16 +73,23 @@
     .modal-content button:hover {
       background: #aa2222;
     }
+
     #loading-screen {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: #111;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       z-index: 1000;
       color: #dd4444;
       font-family: 'Courier New', monospace;
       font-size: 1.3rem;
       user-select: none;
     }
+
     .progress-bar {
       margin-top: 1rem;
       width: 60%;
@@ -63,22 +99,18 @@
       overflow: hidden;
       box-shadow: inset 0 0 5px #000;
     }
-.progress-fill {
-  width: 0%;
-  height: 100%;
-  background: #cc4444;
-  animation: none;
-}
 
-/* We'll trigger the animation with a class */
-.progress-fill.animate {
-  animation: loadingAnim 5s forwards;
-}
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      background: #cc4444;
+      animation: none;
+    }
 
-@keyframes loadingAnim {
-  from { width: 0%; }
-  to { width: 100%; }
-}
+    .progress-fill.animate {
+      animation: loadingAnim 5s forwards;
+    }
+
     @keyframes loadingAnim {
       from { width: 0%; }
       to { width: 100%; }
@@ -86,6 +118,7 @@
   </style>
 </head>
 <body>
+
   <button id="initiate-btn">Begin Initiation</button>
 
   <div id="oath-modal" class="modal">
@@ -100,7 +133,7 @@
     </div>
   </div>
 
-  <div id="loading-screen" class="hidden">
+  <div id="loading-screen">
     <p id="loading-text">Summoning Phil’s Blessing...</p>
     <div class="progress-bar">
       <div class="progress-fill"></div>
@@ -112,30 +145,29 @@
     const oathModal = document.getElementById('oath-modal');
     const acceptOathBtn = document.getElementById('accept-oath');
     const loadingScreen = document.getElementById('loading-screen');
+    const progressFill = document.querySelector('.progress-fill');
 
-    // Button to open oath modal
     initiateBtn.addEventListener('click', () => {
-      initiateBtn.style.display = 'none'; // Hide button when modal shows
+      initiateBtn.style.display = 'none'; // hide button when modal opens
       oathModal.style.display = 'flex';
     });
 
-    // Accept oath and start loading
-acceptOathBtn.addEventListener('click', () => {
-  oathModal.style.display = 'none';
-  loadingScreen.style.display = 'flex';
+    acceptOathBtn.addEventListener('click', () => {
+      oathModal.style.display = 'none';
+      loadingScreen.style.display = 'flex';
 
-  const progressFill = document.querySelector('.progress-fill');
-  // Reset animation by removing & adding class
-  progressFill.classList.remove('animate');
-  void progressFill.offsetWidth; // Trigger reflow to restart animation
-  progressFill.classList.add('animate');
+      // Reset & start animation
+      progressFill.classList.remove('animate');
+      void progressFill.offsetWidth; // trigger reflow
+      progressFill.classList.add('animate');
 
-  setTimeout(() => {
-    loadingScreen.style.display = 'none';
-    alert('Welcome, new Phillian. Your initiation is complete.');
-    // window.location.href = 'welcome.html'; // Redirect if you want
-  }, 5000);
-});
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+        alert('Welcome, new Phillian. Your initiation is complete.');
+        // Redirect or close the page if needed:
+        // window.location.href = 'welcome.html';
+      }, 5000);
+    });
   </script>
 </body>
 </html>
