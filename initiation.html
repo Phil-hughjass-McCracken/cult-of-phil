@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Initiation | Cult of Phil</title>
+  <style>
+    /* Paste all CSS from before here */
+    /* For quick copy, here’s the CSS block: */
+    body {
+      background: #111;
+      color: #dd4444;
+      font-family: 'Courier New', monospace;
+      user-select: none;
+      margin: 0; padding: 0;
+      display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;
+    }
+    .modal {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      display: flex; justify-content: center; align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: #222; color: #eee; padding: 2rem;
+      max-width: 400px; text-align: center;
+      border: 3px solid #aa0000;
+      border-radius: 10px;
+    }
+    .modal-content h2 {
+      color: #cc4444;
+      margin-bottom: 1rem;
+    }
+    .modal-content button {
+      margin-top: 1.5rem;
+      background: #cc4444;
+      border: none;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 6px;
+    }
+    .modal-content button:hover {
+      background: #aa2222;
+    }
+    #loading-screen {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: #111;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      z-index: 1000;
+      color: #dd4444;
+      font-family: 'Courier New', monospace;
+      font-size: 1.3rem;
+      user-select: none;
+    }
+    .progress-bar {
+      margin-top: 1rem;
+      width: 60%;
+      height: 20px;
+      background: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: inset 0 0 5px #000;
+    }
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      background: #cc4444;
+      animation: loadingAnim 5s forwards;
+    }
+    @keyframes loadingAnim {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <button id="initiate-btn">Begin Initiation</button>
+
+  <div id="oath-modal" class="modal">
+    <div class="modal-content">
+      <h2>Initiation Oath</h2>
+      <p>
+        I solemnly swear to follow Phil’s path without question,<br />
+        To embrace the darkness and forsake the light,<br />
+        To surrender my will for eternal devotion.
+      </p>
+      <button id="accept-oath">I Pledge</button>
+    </div>
+  </div>
+
+  <div id="loading-screen" class="hidden">
+    <p id="loading-text">Summoning Phil’s Blessing...</p>
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+  </div>
+
+  <script>
+    const initiateBtn = document.getElementById('initiate-btn');
+    const oathModal = document.getElementById('oath-modal');
+    const acceptOathBtn = document.getElementById('accept-oath');
+    const loadingScreen = document.getElementById('loading-screen');
+
+    // Button to open oath modal
+    initiateBtn.addEventListener('click', () => {
+      initiateBtn.style.display = 'none'; // Hide button when modal shows
+      oathModal.style.display = 'flex';
+    });
+
+    // Accept oath and start loading
+    acceptOathBtn.addEventListener('click', () => {
+      oathModal.style.display = 'none';
+      loadingScreen.style.display = 'flex';
+
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+        alert('Welcome, new Phillian. Your initiation is complete.');
+        // Redirect to welcome or home page if you want:
+        // window.location.href = 'welcome.html';
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
