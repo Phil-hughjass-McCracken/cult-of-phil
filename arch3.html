@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phil's Dark Archives</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #e0dcdc;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff4d4d;
+      margin-bottom: 2rem;
+    }
+
+    .file-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .file-container {
+      background-color: #111;
+      border: 1px solid #444;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(200, 0, 0, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+    }
+
+    .file-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    }
+
+    .file-container h3 {
+      color: #ff4d4d;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .file-container p {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .tags {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .file-container button {
+      margin-top: 0.5rem;
+      padding: 0.4rem 1rem;
+      background-color: #ff1a1a;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .file-container button:hover {
+      background-color: #cc0000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Phil's Dark Archives</h1>
+
+  <div class="file-grid">
+    <div class="file-container">
+      <h3>The Blood Moon Ledger</h3>
+      <p>Recovered from Phillipen’s vault. Redacted names. Very moist.</p>
+      <div class="tags">#Cursed #Phil #Historical</div>
+      <button onclick="alert('You now owe a blood tithe to Phillipen.')">Open File</button>
+    </div>
+
+    <div class="file-container">
+      <h3>The Ticklesmith Tapes</h3>
+      <p>Phimmy says these aren’t real. The screams say otherwise.</p>
+      <div class="tags">#Phimmy #Audio #Possessed</div>
+      <button onclick="alert('Phimmy Ticklesmith winks from beyond.')">Play Recording</button>
+    </div>
+
+    <div class="file-container">
+      <h3>Cocksucka Correspondence</h3>
+      <p>Letters between Phimmessa and the God of Despair. Surprisingly flirty.</p>
+      <div class="tags">#Phimmessa #ForbiddenLove #HornyScrolls</div>
+      <button onclick="alert('The letters burst into flames. That’s normal.')">Read Letters</button>
+    </div>
+
+    <div class="file-container">
+      <h3>Infant Prophecies</h3>
+      <p>Transcribed from Corona’s divine babble. May cause spontaneous combustion.</p>
+      <div class="tags">#Corona #Prophecy #Explosive</div>
+      <button onclick="alert('You feel small. Unworthy. Gurgling.')">Read Prophecy</button>
+    </div>
+  </div>
+
+</body>
+</html>
