@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phil’s Dark Archives</title>
+
+  <style>
+    body {
+      background: #0b0b0b;
+      color: #e6e6e6;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      color: #cc4444;
+      text-shadow: 0 0 5px #cc0000;
+    }
+
+    ul li a {
+      color: #ff6666;
+      text-decoration: none;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .gallery img {
+      max-width: 200px;
+      border: 2px solid #444;
+      box-shadow: 0 0 10px #550000;
+    }
+
+    button {
+      background: #990000;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #scripture-output {
+      margin-top: 1rem;
+      font-style: italic;
+      color: #ff4444;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="introduction">
+      <h1>Phil’s Dark Archives</h1>
+      <p>Enter the vault of forgotten wisdom. These scrolls were not meant for mortal minds…</p>
+    </section>
+
+    <section id="scrolls-of-phil">
+      <h2>📜 Scrolls of Phil</h2>
+      <ul>
+        <li><a href="#">The Original Manifesto (Blood-Stained Copy)</a></li>
+        <li><a href="#">The Lost Prophecies, Volume II</a></li>
+        <li><a href="#">The Unfinished Rant of Phil (Audio)</a></li>
+      </ul>
+    </section>
+
+    <section id="cursed-gallery">
+      <h2>🖼 Cursed Gallery</h2>
+      <div class="gallery">
+        <img src="images/cursed1.jpg" alt="Distorted idol of Phil" />
+        <img src="images/cursed2.jpg" alt="Blurry ritual circle" />
+        <img src="images/cursed3.jpg" alt="Redacted cult document" />
+      </div>
+    </section>
+
+    <section id="whispers">
+      <h2>🔊 Whispering Audio</h2>
+      <audio controls>
+        <source src="audio/chant1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio tag.
+      </audio>
+    </section>
+
+    <section id="interactive-scripture">
+      <h2>🔮 Request a Random Scripture</h2>
+      <button onclick="generateScripture()">Receive a Revelation</button>
+      <p id="scripture-output"></p>
+    </section>
+  </main>
+
+  <script>
+    const scriptures = [
+      "Phil once whispered: 'Consume the void, it’s low in carbs.'",
+      "The shadows remember your face, disciple.",
+      "Do not knock unless the moon bleeds red.",
+      "Phil will return — on a Tuesday. Maybe.",
+      "He who questions shall be answered in screams."
+    ];
+
+    function generateScripture() {
+      const random = scriptures[Math.floor(Math.random() * scriptures.length)];
+      document.getElementById('scripture-output').innerText = random;
+    }
+  </script>
+</body>
+</html>
