@@ -6,85 +6,170 @@
   <title>Phil’s Dark Archives</title>
   <style>
     body {
-      background: #fff;
-      color: #000;
-      font-family: monospace;
-      margin: 2rem;
+      background: #0d0d0d;
+      color: #ff4d4d;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
     }
+
+    nav {
+      background-color: #111;
+      box-shadow: 0 2px 10px #300000;
+      width: 100%;
+      padding: 0.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      gap: 2rem;
+    }
+
+    nav li a {
+      color: #ff4d4d;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav li a:hover {
+      color: #fff;
+      text-shadow: 0 0 5px #ff0000;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #ccc;
+    }
+
     .file-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, 120px);
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
       gap: 2rem;
-      justify-content: start;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
     }
+
     .file {
       text-align: center;
       cursor: pointer;
+      transition: transform 0.2s ease;
     }
+
+    .file:hover {
+      transform: scale(1.05);
+    }
+
     .file-icon {
       font-size: 5rem;
     }
-    a {
-      color: #000;
+
+    .file-name {
+      margin-top: 0.5rem;
+      color: #ff9999;
+    }
+
+    #folder-view {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      color: #ddd;
+    }
+
+    #folder-view a {
+      color: #ff4d4d;
       text-decoration: none;
     }
-    a:hover {
+
+    #folder-view a:hover {
       text-decoration: underline;
     }
-    header {
-      margin-bottom: 2rem;
-    }
-    p.intro {
-      max-width: 600px;
-      font-size: 1rem;
+
+    .file-entry {
+      margin: 0.5rem 0;
     }
   </style>
 </head>
 <body>
+  <!-- Nav Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="indoctrination.html">Indoctrination</a></li>
+      <li><a href="phillians.html">Phillians</a></li>
+      <li><a href="archives.html">Dark Archives</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
   <header>
     <h1>Phil’s Dark Archives</h1>
-    <p class="intro">
-      Navigate Phil’s sacred directories… click the folders to reveal forbidden files.
-    </p>
+    <p>Click on a folder to view forbidden knowledge sealed by The Great Phil himself.</p>
   </header>
 
+  <!-- File Grid -->
   <div class="file-container">
     <div class="file" onclick="openFolder('manifesto')">
       <div class="file-icon">📁</div>
-      <div>Manifesto</div>
+      <div class="file-name">Manifesto</div>
     </div>
     <div class="file" onclick="openFolder('prophecies')">
       <div class="file-icon">📁</div>
-      <div>Prophecies</div>
+      <div class="file-name">Prophecies</div>
     </div>
     <div class="file" onclick="openFolder('lore')">
       <div class="file-icon">📁</div>
-      <div>Dark Lore</div>
+      <div class="file-name">Dark Lore</div>
     </div>
     <div class="file" onclick="openFolder('gallery')">
       <div class="file-icon">📁</div>
-      <div>Gallery</div>
+      <div class="file-name">Gallery</div>
     </div>
   </div>
 
-  <div id="folder-view" style="margin-top:2rem;"></div>
+  <!-- Folder View -->
+  <div id="folder-view"></div>
 
+  <!-- JS -->
   <script>
     const archive = {
-      manifesto: ["phil_manifesto.txt", "oath.txt"],
-      prophecies: ["daily.txt", "volume2.txt"],
-      lore: ["origin_story.md", "rituals.pdf"],
-      gallery: ["idol.jpg", "ritual_circle.png"]
+      manifesto: ["phil_manifesto.txt", "oath_of_blood.txt"],
+      prophecies: ["vision_of_fire.txt", "the_end_times.txt"],
+      lore: ["origin_story.md", "rituals_and_practices.pdf"],
+      gallery: ["idol.jpg", "sacred_circle.png"]
     };
 
     function openFolder(name) {
       const files = archive[name] || [];
       const container = document.getElementById('folder-view');
-      container.innerHTML = '';
-      files.forEach(f => {
-        const el = document.createElement('div');
-        el.innerHTML = `<span class="file-icon">📄</span> <a href="#">${f}</a>`;
-        container.appendChild(el);
+      container.innerHTML = `<h2>${name.charAt(0).toUpperCase() + name.slice(1)} Files</h2>`;
+      files.forEach(file => {
+        const entry = document.createElement('div');
+        entry.className = 'file-entry';
+        entry.innerHTML = `<span>📄</span> <a href="#">${file}</a>`;
+        container.appendChild(entry);
       });
     }
   </script>
