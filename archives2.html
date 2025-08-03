@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phil’s Dark Archives</title>
+  <style>
+    body {
+      background: #fff;
+      color: #000;
+      font-family: monospace;
+      margin: 2rem;
+    }
+    .file-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 120px);
+      gap: 2rem;
+      justify-content: start;
+    }
+    .file {
+      text-align: center;
+      cursor: pointer;
+    }
+    .file-icon {
+      font-size: 5rem;
+    }
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header {
+      margin-bottom: 2rem;
+    }
+    p.intro {
+      max-width: 600px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Phil’s Dark Archives</h1>
+    <p class="intro">
+      Navigate Phil’s sacred directories… click the folders to reveal forbidden files.
+    </p>
+  </header>
+
+  <div class="file-container">
+    <div class="file" onclick="openFolder('manifesto')">
+      <div class="file-icon">📁</div>
+      <div>Manifesto</div>
+    </div>
+    <div class="file" onclick="openFolder('prophecies')">
+      <div class="file-icon">📁</div>
+      <div>Prophecies</div>
+    </div>
+    <div class="file" onclick="openFolder('lore')">
+      <div class="file-icon">📁</div>
+      <div>Dark Lore</div>
+    </div>
+    <div class="file" onclick="openFolder('gallery')">
+      <div class="file-icon">📁</div>
+      <div>Gallery</div>
+    </div>
+  </div>
+
+  <div id="folder-view" style="margin-top:2rem;"></div>
+
+  <script>
+    const archive = {
+      manifesto: ["phil_manifesto.txt", "oath.txt"],
+      prophecies: ["daily.txt", "volume2.txt"],
+      lore: ["origin_story.md", "rituals.pdf"],
+      gallery: ["idol.jpg", "ritual_circle.png"]
+    };
+
+    function openFolder(name) {
+      const files = archive[name] || [];
+      const container = document.getElementById('folder-view');
+      container.innerHTML = '';
+      files.forEach(f => {
+        const el = document.createElement('div');
+        el.innerHTML = `<span class="file-icon">📄</span> <a href="#">${f}</a>`;
+        container.appendChild(el);
+      });
+    }
+  </script>
+</body>
+</html>
