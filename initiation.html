@@ -63,12 +63,22 @@
       overflow: hidden;
       box-shadow: inset 0 0 5px #000;
     }
-    .progress-fill {
-      width: 0%;
-      height: 100%;
-      background: #cc4444;
-      animation: loadingAnim 5s forwards;
-    }
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #cc4444;
+  animation: none;
+}
+
+/* We'll trigger the animation with a class */
+.progress-fill.animate {
+  animation: loadingAnim 5s forwards;
+}
+
+@keyframes loadingAnim {
+  from { width: 0%; }
+  to { width: 100%; }
+}
     @keyframes loadingAnim {
       from { width: 0%; }
       to { width: 100%; }
@@ -110,17 +120,22 @@
     });
 
     // Accept oath and start loading
-    acceptOathBtn.addEventListener('click', () => {
-      oathModal.style.display = 'none';
-      loadingScreen.style.display = 'flex';
+acceptOathBtn.addEventListener('click', () => {
+  oathModal.style.display = 'none';
+  loadingScreen.style.display = 'flex';
 
-      setTimeout(() => {
-        loadingScreen.style.display = 'none';
-        alert('Welcome, new Phillian. Your initiation is complete.');
-        // Redirect to welcome or home page if you want:
-        // window.location.href = 'welcome.html';
-      }, 5000);
-    });
+  const progressFill = document.querySelector('.progress-fill');
+  // Reset animation by removing & adding class
+  progressFill.classList.remove('animate');
+  void progressFill.offsetWidth; // Trigger reflow to restart animation
+  progressFill.classList.add('animate');
+
+  setTimeout(() => {
+    loadingScreen.style.display = 'none';
+    alert('Welcome, new Phillian. Your initiation is complete.');
+    // window.location.href = 'welcome.html'; // Redirect if you want
+  }, 5000);
+});
   </script>
 </body>
 </html>
