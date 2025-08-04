@@ -15,45 +15,43 @@
       align-items: center;
     }
 
-    nav {
+    .navbar {
       background-color: #111;
-      box-shadow: 0 2px 10px #300000;
-      width: 100%;
-      padding: 0.5rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    nav ul {
-      list-style: none;
       display: flex;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #444;
     }
 
-    nav li a {
+    .nav-title {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-title h1 {
       color: #ff4d4d;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      font-weight: normal;
+      color: #888;
+      margin-left: 0.5rem;
+    }
+
+    .nav-links a {
+      color: #ccc;
+      margin-left: 1rem;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
     }
 
-    nav li a:hover {
-      color: #fff;
-      text-shadow: 0 0 5px #ff0000;
+    .nav-links a:hover {
+      color: #ff4d4d;
     }
-
-    header {
-      padding: 2rem;
-      text-align: center;
-      width: 100%;
-      max-width: 900px;
-    }
-
+    
     header h1 {
       font-size: 3rem;
       color: #ff3c3c;
