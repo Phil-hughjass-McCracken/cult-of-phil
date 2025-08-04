@@ -1,114 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rituals & Rites | Cult of Phil</title>
-   <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rituals | Cult of Phil</title>
+  <style>
     body {
+      background-color: #0b0b0b;
+      color: #ddd;
       font-family: 'Georgia', serif;
-      background: #fff;
-      color: #000;
       margin: 0;
-      padding: 0;
     }
-    header, footer {
-      background: #f0f0f0;
-      text-align: center;
-      padding: 20px;
-      border-bottom: 2px solid #ccc;
+
+    .navbar {
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #333;
     }
-    nav {
-      margin-top: 10px;
+
+    .nav-title h1 {
+      margin: 0;
+      color: #ff3333;
     }
-    nav a {
-      margin: 0 10px;
+
+    .nav-links a {
+      color: #ccc;
+      margin-left: 1rem;
       text-decoration: none;
-      color: #333;
+      font-weight: bold;
     }
-    main {
-      padding: 20px;
+
+    .nav-links a:hover {
+      color: #ff3333;
     }
-    section {
-      margin-bottom: 40px;
+
+    .container {
+      padding: 2rem;
     }
-    h1, h2 {
-      margin: 0 0 10px;
+
+    h2 {
+      color: #ff3333;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
     }
-    .card {
-      border: 1px solid #ccc;
-      padding: 15px;
-      margin-bottom: 15px;
-      background: #fafafa;
+
+    .ritual {
+      background-color: #161616;
+      border-left: 4px solid #ff3333;
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(255, 51, 51, 0.15);
     }
-    .redacted {
-      background-color: black;
-      color: black;
-      user-select: none;
-      padding: 2px 6px;
-    }
-    button {
-      background: #111;
+
+    .ritual h3 {
+      margin-top: 0;
       color: #fff;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      margin-top: 10px;
     }
-    .footer-note {
-      font-size: 12px;
+
+    .status {
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .status-daily { color: #66cc66; }
+    .status-advanced { color: #3399ff; }
+    .status-forbidden { color: #ff4444; }
+    .status-sacred { color: #e0b13b; }
+
+    .footer {
+      background-color: #111;
       color: #666;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      border-top: 1px solid #333;
     }
   </style>
 </head>
 <body>
-<header>
-    <h1>The Cult of Phil</h1>
-    <p><em>Unity, Prosperity, Obedience — Mostly in That Order</em></p>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="indoctrination.html">Indoctrination</a> |
-      <a href="phillians.html">Phillians</a> |
-      <a href="archives.html">Archives</a> |
-      <a href="rituals.html">Rituals</a> |
-      <a href="join.html">Join Us</a>
-    </nav>
-</header>
-  
-  <main class="rituals-container">
-    <h1>Rituals & Rites</h1>
-    <p class="intro">
-      All who follow Phil must partake in the sacred rites. These rituals bind us in devotion, power, and questionable sanity.
-    </p>
 
-    <section class="ritual">
-      <h2>The Awakening Chant</h2>
-      <p>Each dawn, loyal Phillians recite Phil’s sacred mantra while staring into a mirror... or a void. Same difference.</p>
-    </section>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-title">
+      <h1>✝ Cult of Phil</h1>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="indoctrination.html">Indoctrination</a>
+      <a href="phillians.html">Phillians</a>
+      <a href="archives.html">Archives</a>
+      <a href="rituals.html">Rituals</a>
+      <a href="enemies.html">Enemies</a>
+      <a href="join.html">Join</a>
+    </div>
+  </div>
 
-    <section class="ritual">
-      <h2>The Binding of the Scroll</h2>
-      <p>Followers must write their darkest secrets on parchment, roll it into a scroll, and place it beneath their pillow. Phil knows all.</p>
-    </section>
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <h2>Ritual Codex</h2>
 
-    <section class="ritual">
-      <h2>The Candle of Doubt</h2>
-      <p>Once a week, a single black candle is lit while reflecting on all who have betrayed the cult (looking at you, Greg).</p>
-    </section>
+    <div class="ritual">
+      <h3>🩸 The Crimson Binding</h3>
+      <p class="status status-advanced">Status: Advanced</p>
+      <p>Used to bind a member’s soul to the Red Pyramid. Participants must chant Phil's 9 True Names backward while submerged in tomato juice and regret.</p>
+    </div>
 
-    <section class="ritual">
-      <h2>The Great Silence</h2>
-      <p>On the 13th of every month, members refrain from speech for 13 minutes at 13:13. Any sounds must be replaced with dramatic hand gestures or screams.</p>
-    </section>
+    <div class="ritual">
+      <h3>🧼 The Weekly Cleansing</h3>
+      <p class="status status-daily">Status: Daily</p>
+      <p>Performed every Tuesday at 3am. Members gather around the Holy Shower Head to purge impure thoughts using incantations and discount body wash.</p>
+    </div>
 
-    <section class="ritual">
-      <h2>Feast of the Forgotten</h2>
-      <p>A symbolic meal of unidentifiable food items to honor those who never made it past indoctrination.</p>
-    </section>
-  </main>
+    <div class="ritual">
+      <h3>🐐 Goat of Summoning</h3>
+      <p class="status status-forbidden">Status: Forbidden</p>
+      <p>This ritual was outlawed after the accidental summoning of Gary, the Accursed Customer Service Demon. Requires one black candle and three DMV forms.</p>
+    </div>
 
-  <footer>
-    <p class="footer-note">© <span class="redacted">[REDACTED]</span> – The Cult of Phil. All Rights Rescinded.</p>
-  </footer>
-</body>
-</html>
+    <div class="ritual">
+      <h3>🪓 Sacrifice of the Mundane</h3>
+      <p class="status status-sacred">Status: Sacred</p>
+      <p>Performed quarterly. Members must destroy their most boring possession in Phil’s name. No, Greg, your tax records don’t count again.</p>
+    </div>
+
+    <div class="ritual">
+      <h3>🪙 Tithe of the Tenfold</h3>
+      <p class="status status-daily">Status: Daily</p>
+      <p>Each member gives 10% of their daily thoughts to Phil. These are recorded in the Thought Jar and sorted by unpaid interns.</p>
+    </div>
+
+    <div class="ritual">
+      <h3>📜 Rite of Indoctrination</h3>
+      <p class="status status-advanced">Status: Advanced</p>
+      <p>New members must recite the sacred pledge while wearing the ceremonial cloak made of old Hot Topic receipts.</p>
+    </div>
+
+    <div class="ritual">
+      <h3>The Binding of The Scroll</h3>
+      <p class="status status-forbidden">Status: Normal</p>
+      <p>Followers MUST write their darkest secrets on parchment, roll it into a scroll, and place it beneath their pillow. Phil Knows All</p>
+    </div>
+
+    <div class="ritual">
+      <h3>The Candle of Doubt</h3>
+      <p class="status status-forbidden">Status: Forbidden</p>
+      <p>Once a Week, a single black candle is lit while reflecting on all who have betrayed the cult.</p>
+    </div>
+
+    <div class="ritual">
+      <h3>The Great Silence</h3>
+      <p class="status status-forbidden">Status: Monthly</p>
+      <p>On the 13th of Every month, members refrain from speech for 13 minutes at 13:13 (1:13). Any sounds must be replaced with dramatic hand gestures or screams.</p>
+    </div>
+    
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Copyright [REDACTED] — All enlightenment subject to Phil’s approval.
+  </div>
