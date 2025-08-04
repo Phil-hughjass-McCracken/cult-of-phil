@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enemy Organizations | Cult of Phil</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #000;
+      color: #eaeaea;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      background-color: #111;
+      box-shadow: 0 2px 10px #300000;
+      width: 100%;
+      padding: 0.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      gap: 2rem;
+    }
+
+    nav li a {
+      color: #ff4d4d;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav li a:hover {
+      color: #fff;
+      text-shadow: 0 0 5px #ff0000;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #ff3c3c;
+      text-shadow: 0 0 10px #ff1a1a;
+      margin-bottom: 0.3rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    main {
+      width: 90%;
+      max-width: 900px;
+      padding-bottom: 3rem;
+    }
+
+    section.enemy {
+      background-color: #111;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #1a0000;
+      margin-bottom: 2rem;
+      padding: 1.5rem 2rem;
+    }
+
+    section.enemy h2 {
+      color: #ff4d4d;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 8px #ff1a1a;
+    }
+
+    section.enemy p {
+      line-height: 1.5;
+      color: #ddd;
+      font-size: 1rem;
+    }
+
+    .redacted {
+      background-color: #330000;
+      color: #330000;
+      border-radius: 4px;
+      padding: 0 6px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+      transition: color 0.3s ease;
+    }
+
+    .redacted:hover {
+      color: #ff4d4d;
+      background-color: transparent;
+      text-shadow: 0 0 8px #ff1a1a;
+    }
+
+    .enemy-img {
+      float: right;
+      max-width: 150px;
+      margin-left: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #660000;
+      filter: grayscale(80%) contrast(1.2);
+    }
+
+    @media (max-width: 600px) {
+      .enemy-img {
+        float: none;
+        display: block;
+        margin: 1rem auto 1rem auto;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="indoctrination.html">Indoctrination</a></li>
+      <li><a href="phillians.html">Phillians</a></li>
+      <li><a href="archives.html">Dark Archives</a></li>
+      <li><a href="enemies.html">Enemy Organizations</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Enemy Organizations</h1>
+    <p>Dark forces oppose the Cult of Phil. Beware the shadowy groups that seek to contain, betray, or destroy us.</p>
+  </header>
+
+  <main>
+
+    <section class="enemy" id="diavolos">
+      <h2>The Diavolos Cult</h2>
+      <img class="enemy-img" src="images/diavolos.jpg" alt="The Diavolos Cult symbol" />
+      <p>
+        The Diavolos Cult is a rival sect, known for their <span class="redacted" title="Classified">[REDACTED]</span> attempts to lure away our devoted Phillians.
+        Their rituals are a twisted mockery of our own, fueled by <span class="redacted" title="Top Secret">[REDACTED]</span> energies stolen from forbidden realms.
+      </p>
+    </section>
+
+    <section class="enemy" id="pci">
+      <h2>Phillian Containment People (PCP)</h2>
+      <img class="enemy-img" src="images/pci_logo.png" alt="Phillian Containment Initiative logo" />
+      <p>
+        The PCI was a government task force established to monitor and contain the rise of Phillian influence. Though officially disbanded, their operatives lurk in the shadows, still hunting for our hidden enclaves.
+        Their methods are brutal, employing psychological warfare and <span class="redacted" title="Confidential">[REDACTED]</span> technology.
+      </p>
+    </section>
+
+    <section class="enemy" id="fbi">
+      <h2>The FBI</h2>
+      <img class="enemy-img" src="images/fbi_badge.png" alt="FBI badge" />
+      <p>
+        The FBI openly investigates our activities, labeling the Cult of Phil a domestic threat.
+        Their agents use surveillance, informants, and infiltration to dismantle our sacred work.
+        However, they underestimate our resilience and the power of Phil’s blessing.
+      </p>
+    </section>
+
+    <section class="enemy" id="traitors">
+      <h2>Traitorous Ex-Members</h2>
+      <p>
+        Among us lurk the fallen—those who dared to betray Phil’s light for personal gain.
+        Many have been silenced, but some remain, spreading lies and fear. Their names are <span class="redacted" title="Names withheld">[REDACTED]</span>, and their fate is sealed.
+      </p>
+    </section>
+
+  </main>
+
+</body>
+</html>
