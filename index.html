@@ -1,116 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Cult of Phil</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phil's Cult Archives</title>
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background: #fff;
-      color: #000;
+      background-color: #0a0a0a;
+      color: #e0dcdc;
+      font-family: 'Courier New', monospace;
       margin: 0;
       padding: 0;
     }
-    header, footer {
-      background: #f0f0f0;
-      text-align: center;
-      padding: 20px;
-      border-bottom: 2px solid #ccc;
+
+    /* NAV BAR */
+    .navbar {
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #444;
     }
-    nav {
-      margin-top: 10px;
+
+    .nav-title {
+      display: flex;
+      align-items: center;
     }
-    nav a {
-      margin: 0 10px;
+
+    .nav-title h1 {
+      color: #ff4d4d;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      font-weight: normal;
+      color: #888;
+      margin-left: 0.5rem;
+    }
+
+    .nav-links a {
+      color: #ccc;
+      margin-left: 1rem;
       text-decoration: none;
-      color: #333;
+      font-weight: bold;
     }
-    main {
-      padding: 20px;
+
+    .nav-links a:hover {
+      color: #ff4d4d;
     }
+
+    /* MAIN SECTIONS */
+    .container {
+      padding: 2rem;
+    }
+
     section {
-      margin-bottom: 40px;
+      background-color: #111;
+      padding: 1.5rem;
+      border: 1px solid #333;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(200, 0, 0, 0.3);
     }
-    h1, h2 {
-      margin: 0 0 10px;
+
+    section h2 {
+      color: #ff4d4d;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
     }
-    .card {
-      border: 1px solid #ccc;
-      padding: 15px;
-      margin-bottom: 15px;
-      background: #fafafa;
+
+    section p, section li {
+      color: #ccc;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
     }
-    .redacted {
-      background-color: black;
-      color: black;
-      user-select: none;
-      padding: 2px 6px;
+
+    /* DONATION PYRAMID */
+    .pyramid {
+      display: grid;
+      justify-content: center;
+      gap: 0.5rem;
+      text-align: center;
+      font-family: monospace;
     }
-    button {
-      background: #111;
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      margin-top: 10px;
+
+    .pyramid-row {
+      background-color: #222;
+      border: 1px solid #444;
+      padding: 0.5rem;
+      border-radius: 5px;
+      color: #ff4d4d;
     }
-    .footer-note {
-      font-size: 12px;
-      color: #666;
+
+    .pyramid-row:hover {
+      background-color: #331111;
     }
+
+    /* TESTIMONIALS */
+    .testimonial {
+      font-style: italic;
+      border-left: 3px solid #ff4d4d;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer {
+  background-color: #111;
+  color: #666;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  border-top: 1px solid #333;
+}
   </style>
 </head>
 <body>
-  <header>
-    <h1>The Cult of Phil</h1>
-    <p><em>Unity, Prosperity, Obedience — Mostly in That Order</em></p>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="indoctrination.html">Indoctrination</a> |
-      <a href="phillians.html">Phillians</a> |
-      <a href="archives.html">Archives</a> |
-      <a href="rituals.html">Rituals</a> |
+
+  <!-- 🧭 NAVBAR -->
+  <div class="navbar">
+    <div class="nav-title">
+      <h1>✝ The Cult of Phil</h1>
+      <span class="subtitle">— Home of Eternal Enlightenment™</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="about.html">About</a>
+      <a href="indoctrination.html">Indoctrination</a>
+      <a href="phillians.html">Phillians</a>
+      <a href="archives.html">Archives</a>
+      <a href="rituals.html">Rituals</a>
+      <a href="#">Ministries</a>
       <a href="join.html">Join Us</a>
-    </nav>
-  </header>
+    </div>
+  </div>
 
-  <main>
-    <section>
+  <!-- 🔥 CONTENT -->
+  <div class="container">
+
+    <!-- 📰 NEWS & PROPAGANDA -->
+    <section id="news">
       <h2>News & Propaganda</h2>
-      <div class="card"><strong>BREAKING:</strong> Phil Spotted Ascending in Public Restroom — Witnesses Converted On Sight</div>
-      <div class="card"><strong>TRUTH DROP:</strong> The Moon Is a Surveillance Device Created by the Ex-Followers</div>
-      <div class="card"><strong>UPDATE:</strong> Ministry of Kool-Aid Distribution Now ISO Certified</div>
+      <ul>
+        <li>🔥 Phillipa spotted levitating above the ritual pit (again).</li>
+        <li>📢 New pamphlets: “Why Reality Is Overrated.” Pick up your copy in the blood chamber.</li>
+        <li>🧠 Phillipen declared the moon “emotionally unstable.” Investigation pending.</li>
+        <li>TRUTH DROP: The Moon Is a Surveillance Device Created by the Ex-Followers</li>
+        <li>UPDATE: Ministry of Kool-Aid Distribution Now ISO Certified</li>
+      </ul>
     </section>
 
-    <section>
+    <!-- 🏛️ OFFICIAL MINISTRIES -->
+    <section id="ministries">
       <h2>Official Ministries</h2>
-      <div class="card">Department of Vibes – Guardians of Frequency Alignment</div>
-      <div class="card">MLM Enforcement Agency – Recruit or Be Recruited</div>
-      <div class="card">Ministry of Mandatory Enlightenment – Learn or Vanish</div>
-      <div class="card">Office of Eternal Optimism – We’re Totally Winning</div>
-      <div class="card">Division of Pyramid Scheme Logistics – Structural Integrity Guaranteed</div>
-      <div class="card">Ministry of Kool-Aid Distribution – Flavor of the Month: Mystery Berry</div>
+      <ul>
+        <li>🔮 Ministry of Vision – Oversees divine hallucinations and dream-based doctrine.</li>
+        <li>🩸 Ministry of Sacrifice – Organizes annual potlucks and ceremonial dismemberments.</li>
+        <li>Department of Vibes – Guardians of Frequency Alignment</li>
+        <li>MLM Enforcement Agency – Recruit or Be Recruited</li>
+        <li>Ministry of Mandatory Enlightenment – Learn or Vanish</li>
+        <li>Office of Eternal Optimism – We’re Totally Winning</li>
+        <li>Division of Pyramid Scheme Logistics – Structural Integrity Guaranteed</li>
+        <li>Ministry of Kool-Aid Distribution – Flavor of the Month: Mystery Berry</li>
+      </ul>
     </section>
 
-    <section>
-      <h2>Member Testimonials</h2>
-      <div class="card">"I used to have free will. Now I have Phil. Way better." – <em>Ex-Tax Consultant</em></div>
-      <div class="card">"I climbed the donation pyramid and now I can astral project on command." – <em>Level 5 Devotee</em></div>
+    <!-- ✨ TESTIMONIALS -->
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonial">“Ever since I joined the Cult of Phil, I’ve stopped fearing mirrors.” – Member</div>
+      <div class="testimonial">“I ascended twice before breakfast.” – Mr. Trump</div>
+      <div class="testimonial">“I used to have free will. Now I have Phil. Way better." – Ex-Tax Consultant</div>
+      <div class="testimonial">“I climbed the donation pyramid and now I can astral project on command." – Level 5 Devotee</div>
     </section>
 
-    <section>
+    <!-- 💸 DONATION PYRAMID -->
+    <section id="donate">
       <h2>Donation Pyramid</h2>
-      <div class="card">
-        <p>Climb the pyramid. Donate to unlock enlightenment tiers. Reach "Golden Goat" status for inner circle access.</p>
-        <button style="background: darkred;">Donate Now</button>
+      <div class="pyramid">
+        <div class="pyramid-row">👑 The High Couple ($1,000+)</div>
+        <div class="pyramid-row">🩸 Blood Benefactors ($500+)</div>
+        <div class="pyramid-row">🎁 Ritual Sustainers ($100+)</div>
+        <div class="pyramid-row">💀 Tithe Tributes ($20+)</div>
+        <div class="pyramid-row">🙏 Casual Sacrificers ($5)</div>
       </div>
     </section>
-  </main>
 
-  <footer>
-    <p class="footer-note">© <span class="redacted">[REDACTED]</span> – The Cult of Phil. All Rights Rescinded.</p>
-  </footer>
+  </div>
+  <footer class="footer">
+  <p>© <span id="year"></span> [REDACTED] – All rights recinded.</p>
+</footer>
 </body>
 </html>
