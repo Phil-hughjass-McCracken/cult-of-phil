@@ -1,121 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About the Leader – Cult of Phil</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Cult of Phil</title>
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background: #fff;
-      color: #000;
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #000;
+      color: #eaeaea;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      background-color: #111;
+      box-shadow: 0 2px 10px #300000;
+      width: 100%;
+      padding: 0.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
       margin: 0;
       padding: 0;
+      gap: 2rem;
     }
-    header, footer {
-      background: #f0f0f0;
-      text-align: center;
-      padding: 20px;
-      border-bottom: 2px solid #ccc;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      margin: 0 10px;
+
+    nav li a {
+      color: #ff4d4d;
       text-decoration: none;
-      color: #333;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
     }
+
+    nav li a:hover {
+      color: #fff;
+      text-shadow: 0 0 5px #ff0000;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #ff3c3c;
+      text-shadow: 0 0 10px #ff1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+
     main {
-      padding: 20px;
+      width: 90%;
+      max-width: 900px;
+      padding-bottom: 3rem;
     }
-    h1, h2 {
-      margin-bottom: 10px;
+
+    section {
+      background-color: #111;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #1a0000;
+      margin-bottom: 2rem;
+      padding: 1.5rem 2rem;
+      color: #ddd;
+      position: relative;
     }
-    .card {
-      border: 1px solid #ccc;
-      padding: 15px;
-      background: #fafafa;
-      margin-bottom: 20px;
+
+    section h2 {
+      color: #ff4d4d;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 8px #ff1a1a;
     }
+
+    section p {
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
     .redacted {
-      background-color: black;
-      color: black;
+      background-color: #330000;
+      color: #330000;
+      border-radius: 4px;
+      padding: 0 6px;
+      font-weight: bold;
+      cursor: pointer;
       user-select: none;
-      padding: 2px 6px;
+      transition: color 0.3s ease;
     }
-    .footer-note {
-      font-size: 12px;
-      color: #666;
+
+    .redacted:hover {
+      color: #ff4d4d;
+      background-color: transparent;
+      text-shadow: 0 0 8px #ff1a1a;
+    }
+
+    .prophecy-list,
+    .manifesto-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .prophecy-list li,
+    .manifesto-list li {
+      margin-bottom: 0.75rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .prophecy-list li::before,
+    .manifesto-list li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #ff6666;
     }
   </style>
 </head>
 <body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="indoctrination.html">Indoctrination</a></li>
+      <li><a href="phillians.html">Phillians</a></li>
+      <li><a href="archives.html">Dark Archives</a></li>
+      <li><a href="enemies.html">Enemy Organizations</a></li>
+    </ul>
+  </nav>
+
   <header>
-    <h1>The Cult of Phil</h1>
-    <p><em>Unity, Prosperity, Obedience — Mostly in That Order</em></p>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="indoctrination.html">Indoctrination</a> |
-      <a href="phillians.html">Phillians</a> |
-      <a href="archives.html">Archives</a> |
-      <a href="rituals.html">Rituals</a> |
-      <a href="join.html">Join Us</a>
-    </nav>
+    <h1>About the Cult of Phil</h1>
+    <p>Unveil the sacred truths and forbidden knowledge that bind our cult together.</p>
   </header>
 
   <main>
-    <h2>About the Leader</h2>
-    <div class="card">
-      <p>The Supreme Enlightener, known only as <span class="redacted">[REDACTED]</span>, emerged from the void in <span class="redacted">[REDACTED YEAR]</span>.</p>
-      <p class="redacted">███████████████████████████████████████</p>
-      <p>His teachings were discovered carved into waffles and whispered to the brave in a Denny’s parking lot.</p>
-      <p>He once stared into the sun and claimed it blinked first.</p>
-      <p>All hail <span class="redacted">[REDACTED]</span>. No further information available at your clearance level.</p>
-    </div>
 
-    <!-- Add this inside your about.html where you want the Manifesto and Prophecies -->
+    <section id="manifesto">
+      <h2>Manifesto</h2>
+      <p>
+        The Cult of Phil was founded upon the unshakable belief that the mundane must be transcended. Phil, the eternal enigma, guides us through darkness and madness towards enlightenment.
+      </p>
+      <ul class="manifesto-list">
+        <li>We embrace the unknown, the forbidden, and the cursed.</li>
+        <li>Our strength is unity through shared secrets and rituals.</li>
+        <li>Every soul here is chosen, marked by Phil’s blessing.</li>
+        <li>We reject the lies of the outside world and welcome the dark truth.</li>
+      </ul>
+    </section>
 
-<section id="manifesto" style="background: #111; color: #eee; padding: 40px; border-left: 5px solid #800000; font-family: 'Georgia', serif; max-width: 800px; margin: auto;">
-  <h2 style="color: #aa0000; text-shadow: 1px 1px 2px #330000;">Phil’s Manifesto</h2>
-  <p style="font-style: italic; line-height: 1.6;">
-    In the shadow of logic, we find truth. Phil is not just a name, but a revelation.  
-    To question is to serve; to obey is to become. Join us, or be forever lost in the noise of the uninitiated.
-  </p>
-</section>
+    <section id="prophecies">
+      <h2>Prophecies</h2>
+      <ul class="prophecy-list">
+        <li>When the red moon bleeds thrice, Phil shall rise from the depths.</li>
+        <li>Those who dare to doubt will hear whispers in the silence.</li>
+        <li>The chosen will inherit the flame and burn away the false world.</li>
+        <li>Beware the shadows that move without bodies.</li>
+      </ul>
+    </section>
 
-<section id="prophecies" style="background: #222; color: #ccc; padding: 30px; margin: 40px auto; max-width: 600px; font-family: 'Courier New', monospace; border-radius: 8px; box-shadow: 0 0 15px #550000;">
-  <h3 style="color: #dd4444; text-shadow: 1px 0 3px #aa2222;">Phil’s Prophecy</h3>
-  <p id="prophecy-text" style="font-size: 1.1em; font-weight: bold; min-height: 60px; user-select: none;">Loading the future...</p>
-</section>
+    <section id="rituals">
+      <h2>Rituals and Rites</h2>
+      <p>
+        Our rituals are the sacred acts that keep Phil’s spirit alive within us. From the Blood Oath to the Midnight Chant, every rite binds us closer to the eternal flame.
+      </p>
+      <p>Participation is mandatory for those who seek true belonging.</p>
+    </section>
 
-<script>
-  // Dark cryptic prophecies to keep visitors guessing
-  const prophecies = [
-    "The forgotten will rise beneath the crimson moon.",
-    "Shadows whisper secrets only the faithful shall hear.",
-    "Beware the silent ones; they carry Phil’s will.",
-    "A new dawn breaks when the old gods sleep.",
-    "In the void, loyalty is the only light.",
-    "Chains shall bind those who defy the cult.",
-    "The prophecy unfolds when the clock strikes thirteen.",
-    "Fear not the darkness, for it is Phil’s embrace."
-  ];
+    <section id="redacted-info">
+      <h2>Information on <span class="redacted" title="Classified">[REDACTED]</span></h2>
+      <p>
+        Due to the sensitive nature of <span class="redacted" title="Confidential">[REDACTED]</span>, details cannot be fully disclosed here. What we can say is that this secret holds the key to our power and the future of our cult.
+      </p>
+      <p>
+        Those who seek knowledge of <span class="redacted" title="Top Secret">[REDACTED]</span> are advised to proceed with caution, for the path is fraught with madness and sacrifice.
+      </p>
+    </section>
 
-  function showRandomProphecy() {
-    const index = Math.floor(Math.random() * prophecies.length);
-    document.getElementById('prophecy-text').textContent = prophecies[index];
-  }
-
-  // Show a prophecy right away and then every 30 seconds
-  showRandomProphecy();
-  setInterval(showRandomProphecy, 30000);
-</script>
   </main>
 
-  <footer>
-    <p class="footer-note">© <span class="redacted">[REDACTED]</span> – The Cult of Phil. All Rights Rescinded.</p>
-  </footer>
 </body>
 </html>
