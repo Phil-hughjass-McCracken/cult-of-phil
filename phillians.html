@@ -3,186 +3,199 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Phillians – The Cult of Phil</title>
+  <title>Phillians | Cult of Phil</title>
   <style>
     body {
-      background-color: #0e0e0e;
-      color: #f8f8f8;
-      font-family: 'Georgia', serif;
+      background-color: #0a0a0a;
+      color: #e0dcdc;
+      font-family: 'Courier New', monospace;
       margin: 0;
       padding: 0;
     }
 
-    header, footer {
+    .navbar {
       background-color: #111;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 20px;
-      border-bottom: 2px solid #600;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: #ff3333;
-      text-decoration: none;
-      margin: 0 15px;
-    }
-
-    main {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 2.5em;
-      margin-bottom: 30px;
-      border-bottom: 1px solid #400;
-      padding-bottom: 10px;
-    }
-
-    .phillian {
       display: flex;
-      background: #1a1a1a;
-      margin-bottom: 30px;
-      padding: 20px;
-      border-left: 5px solid #e60000;
-      box-shadow: 0 0 10px #500;
-      border-radius: 8px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #444;
     }
 
-    .phillian img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-right: 20px;
+    .nav-title {
+      display: flex;
+      align-items: center;
     }
 
-    .phillian-info {
-      flex: 1;
+    .nav-title h1 {
+      color: #ff4d4d;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      font-weight: normal;
+      color: #888;
+      margin-left: 0.5rem;
+    }
+
+    .nav-links a {
+      color: #ccc;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #ff4d4d;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    .phillian-card {
+      display: flex;
+      background-color: #111;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      align-items: flex-start;
+      box-shadow: 0 0 10px rgba(255, 77, 77, 0.2);
+    }
+
+    .phillian-card img {
+      width: 120px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 1rem;
+      border: 2px solid #444;
+    }
+
+    .phillian-info h3 {
+      margin: 0;
+      color: #ff4d4d;
+    }
+
+    .phillian-info p {
+      margin-top: 0.5rem;
+      color: #ccc;
+      font-size: 0.95rem;
     }
 
     .status {
       font-weight: bold;
-      padding: 4px 8px;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 10px;
+      margin-top: 0.5rem;
     }
 
-    .unstable { background-color: #a00; color: white; }
-    .controlled { background-color: #0a0; color: white; }
-    .deadly { background-color: #a00; color: white; }
+    .status-unstable { color: #ff6600; }
+    .status-deadly { color: #ff1a1a; }
+    .status-controlled { color: #00cc66; }
+    .status-stable { color: #66ccff; }
 
-    .return-link {
-      display: block;
+    .footer {
+      background-color: #111;
+      color: #666;
       text-align: center;
-      margin-top: 40px;
-    }
-
-    .return-link a {
-      background-color: #444;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-
-    .return-link a:hover {
-      background-color: #666;
+      padding: 1rem;
+      font-size: 0.8rem;
+      border-top: 1px solid #333;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Phillians</h1>
-    <p>Subjects of The Cult of Phil – Status: Monitored</p>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="indoctrination.html">Indoctrination</a> |
-      <a href="phillians.html">Phillians</a> |
-      <a href="archives.html">Archives</a> |
-      <a href="rituals.html">Rituals</a> |
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-title">
+      <h1>✝ The Cult of Phil</h1>
+      <span class="subtitle">— Home of Eternal Enlightenment™</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="indoctrination.html">Indoctrination</a>
+      <a href="phillians.html">Phillians</a>
+      <a href="archives.html">Archives</a>
+      <a href="rituals.html">Rituals</a>
+      <a href="enemies.html">Enemies</a>
       <a href="join.html">Join Us</a>
-    </nav>
-  </header>
+    </div>
+  </div>
 
-  <main>
-    <div class="phillian">
-      <img src="phillians/phil.png" alt="Philian-010">
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <h2>Phillians</h2>
+
+    <div class="phillian-card">
+      <img src="phillians/phil.png" alt="Phil McCracken">
       <div class="phillian-info">
-        <h2>Philian-010 Phil McCracken</h2>
-        <p>Philian-010 is our tenth experiment, we thought he was the perfect one until he regained self-awareness, he managed to escape the cult, we been looking for him ever since, if anybody finds him, call (954)-687-1075.</p>
-        <span class="status unstable">Status: Unstable</span>
+        <h3>Phillian-010 Phil McCracken</h3>
+        <p>Phillian-010 is our tenth experiment. He was thought to be perfect—until he regained self-awareness and escaped. If found, call (954)-687-1075.</p>
+        <p class="status status-unstable">Status: Unstable</p>
       </div>
     </div>
 
-    <div class="phillian">
-      <img src="phillians/phillipa.jpg" alt="Philian-015">
+    <div class="phillian-card">
+      <img src="phillians/phillipa.png" alt="Phillipa McCracken">
       <div class="phillian-info">
-        <h2>Philian-015 Phillipa McCracken</h2>
-        <p>Dispatched to recover Phil. Gained self-awareness, went rogue, married Phil. Potential extinction-class anomaly.</p>
-        <span class="status deadly">Status: Deadly</span>
+        <h3>Phillian-015 Phillipa McCracken</h3>
+        <p>Dispatched to find Phil, she gained full self-control and eventually married him. Now a powerful threat.</p>
+        <p class="status status-deadly">Status: Deadly</p>
       </div>
     </div>
 
-    <div class="phillian">
-      <img src="https://via.placeholder.com/150" alt="Phillipo">
+    <div class="phillian-card">
+      <img src="phillians/phillip.png" alt="Phillip McCracken">
       <div class="phillian-info">
-        <h2>Philian-036 Phillipo McCracken</h2>
-        <p>Assigned to retrieve Phil and Phillipa. Youngest asset. Deemed highly suggestible and currently stable.</p>
-        <span class="status controlled">Status: Controlled</span>
+        <h3>Phillian-036 Phillip McCracken</h3>
+        <p>Our thirty-sixth experiment, currently being sent to retrieve Phil and Phillipa. Likely to succeed.</p>
+        <p class="status status-controlled">Status: Controlled</p>
       </div>
     </div>
 
-    <div class="phillian">
-      <img src="https://via.placeholder.com/150" alt="Kairo">
+    <div class="phillian-card">
+      <img src="phillians/kairo.png" alt="Kairo McCracken">
       <div class="phillian-info">
-        <h2>Philian-034 Kairo McCracken</h2>
-        <p>Fireborn child of Phil and Phillipa. Potentially assisting in dismantling the cult. Surveillance active.</p>
-        <span class="status deadly">Status: Unknown</span>
+        <h3>Phillian-034 Kairo McCracken</h3>
+        <p>Firstborn of Phil and Phillipa. Believed to aid in dismantling the cult.</p>
+        <p class="status status-stable">Status: Stable</p>
       </div>
     </div>
 
-    <div class="phillian">
-      <img src="phillians/corona.png" alt="Philian-038">
+    <div class="phillian-card">
+      <img src="phillians/corona.png" alt="Corona McCracken">
       <div class="phillian-info">
-        <h2>Philian-038 Corona McCracken</h2>
-        <p>Second-born of Phil and Phillipa. Born under strange astrological anomalies. Age: infant. Designation pending.</p>
-        <span class="status deadly">Status: Unknown</span>
+        <h3>Phillian-038 Corona McCracken</h3>
+        <p>Second child of Phil and Phillipa, born June 12, 2025.</p>
+        <p class="status status-stable">Status: Stable</p>
       </div>
     </div>
 
-    <div class="phillian">
-      <img src="https://via.placeholder.com/150" alt="Phimmy">
+    <div class="phillian-card">
+      <img src="phillians/phinny.png" alt="Phinmy Ticklesmith">
       <div class="phillian-info">
-        <h2>Phimmy Ticklesmith</h2>
-        <p>Philian-12. Handles the Oletchos operating system. Also collects testimonials. Excessively happy.</p>
-        <span class="status controlled">Status: Controlled</span>
+        <h3>Phillian-012 Phinmy Ticklesmith</h3>
+        <p>Operates the Olethros and writes testimonies. A cornerstone of our outreach.</p>
+        <p class="status status-stable">Status: Stable</p>
       </div>
     </div>
 
-    <div class="phillian">
-      <img src="phillians/senor.png" alt="Philian-024">
+    <div class="phillian-card">
+      <img src="phillians/ashwhoopin.png" alt="Senor Ashwhoopin">
       <div class="phillian-info">
-        <h2>Phillian-024 Señor Aśwhoopin</h2>
-        <p> Senor Aswhoopin was developed at our Mexican base. He is know for his high-inpact disciplanary actions A.K.A He can deliver an impressive ass whooping that will leave you down for a while. Highly respected. Mildly feared.</p>
+        <h3>Phillian-024 Senor Ashwhoopin</h3>
+        <p>Developed at our Mexican base. Can deliver an ass-whooping so divine, it may convert atheists.</p>
+        <p class="status status-stable">Status: Stable</p>
       </div>
     </div>
 
-    <div class="return-link">
-      <a href="index.html">Return to HQ</a>
-    </div>
-  </main>
+  </div>
 
-  <footer>
-    <p>All personnel are monitored by The Cult of Phil. Side effects may include paranoia, transcendence, and enlightenment.</p>
-  </footer>
+  <!-- FOOTER -->
+  <div class="footer">
+    Copyright [REDACTED] — All rights rescinded. Praise Phil.
+  </div>
 </body>
 </html>
