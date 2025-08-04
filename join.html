@@ -1,108 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join the Cult – Cult of Phil</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join the Cult of Phil</title>
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background: #fff;
-      color: #000;
+      background-color: #0a0a0a;
+      color: #e0dcdc;
+      font-family: 'Courier New', monospace;
       margin: 0;
       padding: 0;
     }
-    header, footer {
-      background: #f0f0f0;
-      text-align: center;
-      padding: 20px;
-      border-bottom: 2px solid #ccc;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333;
-    }
-    main {
-      padding: 20px;
-    }
-    h1, h2 {
-      margin-bottom: 10px;
-    }
-    .card {
-      border: 1px solid #ccc;
-      padding: 15px;
-      background: #fafafa;
-      margin-bottom: 20px;
-    }
-    button {
-      background: #111;
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    .footer-note {
-      font-size: 12px;
-      color: #666;
-    }
-.initiation-button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #ff4d4d;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #ff4d4d;
-  transition: all 0.3s ease;
-}
 
-.initiation-button:hover {
-  background-color: #fff;
-  color: #ff4d4d;
-  box-shadow: 0 0 15px #ff1a1a;
-}
+    .navbar {
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #444;
+    }
+
+    .nav-title {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-title h1 {
+      color: #ff4d4d;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      font-weight: normal;
+      color: #888;
+      margin-left: 0.5rem;
+    }
+
+    .nav-links a {
+      color: #ccc;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #ff4d4d;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    .initiation-box {
+      background-color: #111;
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid #333;
+      box-shadow: 0 0 10px rgba(200, 0, 0, 0.3);
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .initiation-box h2 {
+      color: #ff4d4d;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .initiation-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .initiation-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .initiation-box ul li {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    .initiation-button {
+      margin-top: 2rem;
+      background-color: #ff4d4d;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      color: #111;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .initiation-button:hover {
+      background-color: #cc0000;
+    }
+
+    .footer {
+      background-color: #111;
+      color: #666;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      border-top: 1px solid #333;
+      margin-top: 3rem;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>The Cult of Phil</h1>
-    <p><em>Unity, Prosperity, Obedience — Mostly in That Order</em></p>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="indoctrination.html">Indoctrination</a> |
-      <a href="phillians.html">Phillians</a> |
-      <a href="archives.html">Archives</a> |
-      <a href="rituals.html">Rituals</a> |
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="nav-title">
+      <h1>✝ The Cult of Phil</h1>
+      <span class="subtitle">— Eternal Enlightenment™</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="indoctrination.html">Indoctrination</a>
+      <a href="phillians.html">Phillians</a>
+      <a href="archives.html">Archives</a>
+      <a href="rituals.html">Rituals</a>
       <a href="join.html">Join Us</a>
-    </nav>
-  </header>
+    </div>
+  </div>
 
-  <main>
-    <h2>Join the Cause</h2>
-    <div class="card">
-      <p>Welcome, aspiring follower. Initiation requires the following:</p>
+  <!-- Content -->
+  <div class="container">
+    <div class="initiation-box">
+      <h2>Welcome, aspiring follower.</h2>
+      <p>Initiation requires the following:</p>
       <ul>
         <li>🩸 3 vials of your blood</li>
         <li>🔒 Your Netflix password</li>
         <li>💇 A lock of hair from your less-favored sibling</li>
       </ul>
-<div class="initiation-section">
-  <h2>Ready to Devote Your Soul?</h2>
-  <a href="initiation.html" class="initiation-button">Begin Initiation</a>
-</div>
+      <p><strong>Ready to Devote Your Soul?</strong></p>
+      <button class="initiation-button" onclick="location.href='initiation.html'">Begin Initiation</button>
     </div>
-  </main>
+  </div>
 
-  <footer>
-    <p class="footer-note">© <span class="redacted">[REDACTED]</span> – The Cult of Phil. All Rights Rescinded.</p>
-  </footer>
+  <div class="initiation-box" style="margin-top: 3rem;">
+  <h2>Generate Your Phillian ID</h2>
+  <form id="phillianForm">
+    <input type="text" id="name" placeholder="Your Name" required style="margin: 0.5rem; padding: 0.5rem;"><br>
+    <input type="text" id="offering" placeholder="Favorite Offering" required style="margin: 0.5rem; padding: 0.5rem;"><br>
+    <input type="text" id="bloodType" placeholder="Blood Type" required style="margin: 0.5rem; padding: 0.5rem;"><br>
+    <input type="text" id="secret" placeholder="Your Darkest Secret (Optional)" style="margin: 0.5rem; padding: 0.5rem;"><br>
+    <button type="submit" class="initiation-button">Summon My ID</button>
+  </form>
+  <div id="phillianResult" style="margin-top: 2rem;"></div>
+</div>
+
+<script>
+  document.getElementById('phillianForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const offering = document.getElementById('offering').value;
+    const bloodType = document.getElementById('bloodType').value;
+    const secret = document.getElementById('secret').value;
+
+    const idNumber = Math.floor(Math.random() * 900) + 100;
+    const statuses = ["Stable", "Unstable", "Severely Unhinged"];
+    const status = statuses[Math.floor(Math.random() * statuses.length)];
+
+    let result = `
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Phillian ID:</strong> #${idNumber}</p>
+      <p><strong>Status:</strong> ${status}</p>
+      <p><strong>Offering:</strong> ${offering}</p>
+      <p><strong>Blood Type:</strong> ${bloodType}</p>
+    `;
+
+    if (secret.trim()) {
+      result += `<p><strong>Darkest Secret:</strong> <em>${secret}</em></p>`;
+    }
+
+    document.getElementById('phillianResult').innerHTML = result;
+  });
+</script>
+
+  <!-- Footer -->
+  <div class="footer">
+    Copyright [REDACTED] — All rights recinded
+  </div>
 </body>
 </html>
